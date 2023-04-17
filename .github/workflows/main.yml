@@ -21,7 +21,7 @@ jobs:
       - name: Commit and push build to build branch
         uses: EndBug/add-and-commit@v7
         with:
-          message: "Build and deploy to build branch"
+          message: "Build deploy to build branch"
           add: 'build'
           force: true
           branch: build
