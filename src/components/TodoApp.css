@@ -1,0 +1,126 @@
+/* App.css */
+
+/* Main container */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Form for adding new Todos */
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+form input[type='text'] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+form button[type='submit'] {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* List of Todos */
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Todo item */
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+li.completed {
+  background-color: #d0d0d0;
+}
+
+li .todo-text {
+  flex: 1;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+li .todo-text span {
+  text-decoration: line-through;
+}
+
+li .todo-text input[type='text'] {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+li .todo-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li .todo-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+li .due-date-input {
+  margin-left: 1rem;
+}
+
+li .due-date-input input[type='date'] {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Button to clear completed Todos */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
