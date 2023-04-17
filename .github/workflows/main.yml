@@ -1,0 +1,29 @@
+name: Build and Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build React app
+        run: npm run build
+      - name: Commit and push build to build branch
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Build and deploy to build branch"
+          add: 'build'
+          force: true
+          branch: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
